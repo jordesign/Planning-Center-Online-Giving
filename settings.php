@@ -36,11 +36,22 @@ class pcoOptions {
 			</form>
 
 			<h2>Usage</h2>
-			<p>The 'give' button can be inserted into your page content (or a text widget) using the shortcode [pco-giving]. <br>The default settings from this page will be used, but can be overidden in thr format [pco-giving button="Donate Now" subdomain="firstballard" class="button"]</p>.
+			<p>The 'give' button can be inserted into your page content (or a text widget) using the shortcode <code>[pco-giving]</code>. <br>The default settings from this page will be used, but can be overidden in the format <code>[pco-giving button="Donate Now" subdomain="firstballard" class="button"]</code></p>.
+
+			<h3>Shortcode Attributes</h3>
+			<p><strong><code>button</code></strong> <br>
+				This replaces the string of text displayed within the button.
+			</p>
+			<p><strong><code>subdomain</code></strong> <br>
+				This is the subdomain associated with your 'Planning Center Online' account.
+			</p>
+			<p><strong><code>class</code></strong> <br>
+				This can be used to add CSS classes your theme might use for button or link styling.
+			</p>
 		</div>
 	<?php }
 
-	public function pco_options_page_init() {
+	public function pco_options_page_init() { 
 		register_setting(
 			'pco_options_option_group', // option_group
 			'pco_options_option_name', // option_name
@@ -102,7 +113,7 @@ class pcoOptions {
 	public function pco_church_id_0_callback() {
 		printf(
 			'<input class="regular-text" type="text" name="pco_options_option_name[pco_church_id_0]" id="pco_church_id_0" value="%s">
-			<p>This is the string in your giving URL. [yourchurchsubdomain].churchcenteronline.com </p>',
+			<p>This is the string in your giving URL. <code>[yourchurchsubdomain].churchcenteronline.com</code> </p>',
 			isset( $this->pco_options_options['pco_church_id_0'] ) ? esc_attr( $this->pco_options_options['pco_church_id_0']) : ''
 		);
 	}

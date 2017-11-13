@@ -7,16 +7,16 @@ function pco_giving_shortcode( $atts) {
 	wp_enqueue_script( 'pco-giving' );
 
 	//Pull in the site options
-	$options = get_option( 'pco_options_option_name' );  
+	$options = esc_html(get_option( 'pco_options_option_name' ));  
 
 	//Get Tithely Church ID
-	$pco_church_id = $options['pco_church_id_0'];
+	$pco_church_id = esc_html($options['pco_church_id_0']);
 
 	//Get the Button Text
-	$pco_button_text = $options['default_button_text_1'];
+	$pco_button_text = esc_html($options['default_button_text_1']);
 
 	//Get the Styling Class
-	$pco_styling_class = $options['styling_class_2'];
+	$pco_styling_class = esc_html($options['styling_class_2']);
 
 	// Attributes
 	$shortcode_atts =  shortcode_atts(
