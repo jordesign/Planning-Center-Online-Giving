@@ -7,7 +7,7 @@ function pco_giving_shortcode( $atts) {
 	wp_enqueue_script( 'pco-giving' );
 
 	//Pull in the site options
-	$options = esc_html(get_option( 'pco_options_option_name' ));  
+	$options = get_option( 'pco_options_option_name' ) ;  
 
 	//Get Tithely Church ID
 	$pco_church_id = esc_html($options['pco_church_id_0']);
@@ -29,7 +29,7 @@ function pco_giving_shortcode( $atts) {
 
     // Code
     if ($pco_church_id!=''){
-    	 return '<a href="http://' . $shortcode_atts['subdomain'] . '.churchcenteronline.com/giving" class="pco-giving btn btn-primary et_pb_button fl-button elementor-button ' . $shortcode_atts['class'] . '" data-open-in-church-center-modal="true">' . $shortcode_atts['button'] . '</a>';
+    	 return '<a href="https://' . $shortcode_atts['subdomain'] . '.churchcenteronline.com/giving" class="pco-giving btn btn-primary et_pb_button fl-button elementor-button ' . $shortcode_atts['class'] . '" data-open-in-church-center-modal="true">' . $shortcode_atts['button'] . '</a>';
     }else{
     	return $pco_church_id;
     }

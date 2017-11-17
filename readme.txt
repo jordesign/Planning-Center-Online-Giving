@@ -8,7 +8,7 @@ License: GPL2
 
 
 == Description ==
-This plugin makes it simple to insert the Planning Center Online 'Giving' widget in your site with a shortcode or widget.
+This plugin makes it simple to insert the [Planning Center Online](https://planning.center/) 'Giving' widget in your site with a shortcode or widget.
 
 == Installation ==
 1). Download the plugin
